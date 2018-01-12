@@ -30,12 +30,6 @@ spec:
             value: postgres
           - name: KUMULUZEE_SERVER_BASEURL
             value: http://168.1.149.41:32623/
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 8082
-          initialDelaySeconds: 10
-          periodSeconds: 3
         ports:
         - containerPort: 8082
           name: server
