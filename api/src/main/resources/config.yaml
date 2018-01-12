@@ -1,0 +1,54 @@
+kumuluzee:
+  name: property_rental
+  env:
+    name: dev
+  version: 1.0.0
+  server:
+    base-url: http://localhost:8082
+    http:
+      port: 8082
+  datasources:
+    - jndi-name: jdbc/PropertyRentalDS
+      connection-url: jdbc:postgresql://172.17.0.1:33335/property_rental
+      username: dbuser
+      password: postgres
+      max-pool-size: 20
+  config:
+    etcd:
+      hosts: http://172.17.0.1:2379
+  discovery:
+    etcd:
+      hosts: http://172.17.0.1:2379
+  cors-filter:
+      servlet:
+        allow-origin: "*"
+  metrics:
+        web-instrumentation:
+          - name: property_rental-endpoint
+            url-pattern: /v1/property_rental/*
+  health:
+      checks:
+        data-source-health-check:
+          jndi-name: jdbc/PropertyRentalDS
+  logs:
+    config-file: '<?xml version="1.0" encoding="UTF-8"?>
+                  <Configuration name="property_rental">
+                      <Appenders>
+                          <Console name="console" target="SYSTEM_OUT">
+                              <PatternLayout pattern="%d %p %marker %m %X %ex %n"/>
+                          </Console>
+                          <Socket name="logstash" host="8452d852-8949-439a-b182-c31a0dd3f805-ls.logit.io" port="17860"
+                                                                                         protocol="tcp">
+                              <JSONLayout complete="false" compact="true" eventEol="true" charset="UTF-8" properties="true"/>
+                          </Socket>
+                      </Appenders>
+                      <Loggers>
+                          <!-- Default logger -->
+                          <Root level="all">
+                              <AppenderRef ref="console" level="info"/>
+                              <AppenderRef ref="logstash" level="trace"/>
+                          </Root>
+                      </Loggers>
+                  </Configuration>'
+rest-properties:
+  healthy: true
