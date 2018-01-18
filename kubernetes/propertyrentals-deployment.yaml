@@ -23,7 +23,7 @@ spec:
           - name: KUMULUZEE_SERVER_BASEURL
             value: http://property_rental:8081
           - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
-            value: jdbc:postgresql://postgres-propertyrentals:5432/property_rental
+            value: jdbc:postgresql://postgres-propertyrental:5432/property_rental
           - name: KUMULUZEE_DATASOURCES0_USERNAME
             value: dbuser
           - name: KUMULUZEE_DATASOURCES0_PASSWORD

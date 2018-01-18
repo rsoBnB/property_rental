@@ -71,7 +71,7 @@ public class PropertyRentalResource {
     @Log
     public Response createPropertyRental(PropertyRental propertyRental) {
 
-        if ((propertyRental.getPropertyId() == null || propertyRental.getPropertyId().isEmpty()) || (propertyRental.getRenterId() == null
+        if ((propertyRental.getRealEstateId() == null || propertyRental.getRealEstateId().isEmpty()) || (propertyRental.getRenterId() == null
                 || propertyRental.getRenterId().isEmpty())) {
             return Response.status(Response.Status.BAD_REQUEST).build();
         } else {
