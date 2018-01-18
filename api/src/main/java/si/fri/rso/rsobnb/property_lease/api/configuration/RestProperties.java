@@ -1,4 +1,4 @@
-package si.fri.rso.rsobnb.property_rental.api.configuration;
+package si.fri.rso.rsobnb.property_lease.api.configuration;
 
 import com.kumuluz.ee.configuration.cdi.ConfigBundle;
 

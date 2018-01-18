@@ -1,4 +1,4 @@
-package si.fri.rso.rsobnb.property_rental.api.dtos;
+package si.fri.rso.rsobnb.property_lease.api.dtos;
 
 public class ApiError {
 

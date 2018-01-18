@@ -1,4 +1,4 @@
-package si.fri.rso.rsobnb.property_rental.api.interceptors;
+package si.fri.rso.rsobnb.property_lease.api.interceptors;
 
 import com.kumuluz.ee.common.runtime.EeRuntime;
 import com.kumuluz.ee.configuration.utils.ConfigurationUtil;

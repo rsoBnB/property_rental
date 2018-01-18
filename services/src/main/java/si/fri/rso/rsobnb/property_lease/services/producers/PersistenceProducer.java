@@ -1,4 +1,4 @@
-package si.fri.rso.rsobnb.property_rental.services.producers;
+package si.fri.rso.rsobnb.property_lease.services.producers;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Disposes;
@@ -9,7 +9,7 @@ import javax.persistence.PersistenceUnit;
 
 public class PersistenceProducer {
 
-    @PersistenceUnit(unitName = "property_rental-jpa")
+    @PersistenceUnit(unitName = "property_lease-jpa")
     private EntityManagerFactory emf;
 
     @Produces

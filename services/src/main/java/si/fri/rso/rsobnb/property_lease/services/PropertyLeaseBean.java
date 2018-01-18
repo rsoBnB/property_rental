@@ -1,7 +1,9 @@
-package si.fri.rso.rsobnb.property_rental.services;
+package si.fri.rso.rsobnb.property_lease.services;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
+import si.fri.rso.rsobnb.property_lease.PropertyLease;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -10,60 +12,59 @@ import javax.ws.rs.core.UriInfo;
 import java.util.List;
 import java.util.logging.Logger;
 
-import si.fri.rso.rsobnb.property_rental.PropertyRental;
 
 @ApplicationScoped
-public class PropertyRentalBean {
+public class PropertyLeaseBean {
 
-    private Logger log = Logger.getLogger(PropertyRentalBean.class.getName());
+    private Logger log = Logger.getLogger(PropertyLeaseBean.class.getName());
 
     @Inject
     private EntityManager em;
 
-    public List<PropertyRental> getPropertyRentals(UriInfo uriInfo) {
+    public List<PropertyLease> getPropertyLease(UriInfo uriInfo) {
 
         QueryParameters queryParameters = QueryParameters.query(uriInfo.getRequestUri().getQuery())
                 .defaultOffset(0)
                 .build();
 
-        return JPAUtils.queryEntities(em, PropertyRental.class, queryParameters);
+        return JPAUtils.queryEntities(em, PropertyLease.class, queryParameters);
 
     }
 
-    public List<PropertyRental> getPropertyRentalFilter(UriInfo uriInfo) {
+    public List<PropertyLease> getPropertyLeaseFilter(UriInfo uriInfo) {
         QueryParameters queryParameters = QueryParameters.query(uriInfo.getRequestUri().getQuery()).defaultOffset(0).build();
-        return JPAUtils.queryEntities(em, PropertyRental.class, queryParameters);
+        return JPAUtils.queryEntities(em, PropertyLease.class, queryParameters);
     }
 
-    public PropertyRental getPropertyRental(String propertyRentalId) {
+    public PropertyLease getPropertyLease(String propertyLeaseId) {
 
 
-        PropertyRental propertyRental = em.find(PropertyRental.class, propertyRentalId);
+        PropertyLease propertyLease = em.find(PropertyLease.class, propertyLeaseId);
 
-        if (propertyRental == null) {
+        if (propertyLease == null) {
             throw new NotFoundException();
         }
 
-        return propertyRental;
+        return propertyLease;
     }
 
 
-    public PropertyRental createdPropertyRental(PropertyRental propertyRental) {
+    public PropertyLease createdPropertyLease(PropertyLease propertyLease) {
 
         try {
             beginTx();
-            em.persist(propertyRental);
+            em.persist(propertyLease);
             commitTx();
         } catch (Exception e) {
             rollbackTx();
         }
 
-        return propertyRental;
+        return propertyLease;
     }
 
-    public PropertyRental putPropertyRental(String propertyRentalId, PropertyRental propertyRental) {
+    public PropertyLease putPropertyLease(String propertyLeaseId, PropertyLease propertyLease) {
 
-        PropertyRental r = em.find(PropertyRental.class, propertyRentalId);
+        PropertyLease r = em.find(PropertyLease.class, propertyLeaseId);
 
         if (r == null) {
             return null;
@@ -71,24 +72,24 @@ public class PropertyRentalBean {
 
         try {
             beginTx();
-            propertyRental.setId(r.getId());
-            propertyRental = em.merge(propertyRental);
+            propertyLease.setId(r.getId());
+            propertyLease = em.merge(propertyLease);
             commitTx();
         } catch (Exception e) {
             rollbackTx();
         }
 
-        return propertyRental;
+        return propertyLease;
     }
 
-    public boolean deletePropertyRental(String propertyRentalId) {
+    public boolean deletePropertyLease(String propertyLeaseId) {
 
-        PropertyRental propertyRental = em.find(PropertyRental.class, propertyRentalId);
+        PropertyLease propertyLease = em.find(PropertyLease.class, propertyLeaseId);
 
-        if (propertyRental != null) {
+        if (propertyLease != null) {
             try {
                 beginTx();
-                em.remove(propertyRental);
+                em.remove(propertyLease);
                 commitTx();
             } catch (Exception e) {
                 rollbackTx();
