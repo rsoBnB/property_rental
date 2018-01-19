@@ -9,6 +9,9 @@
         <module name="property_lease-api" />
         <module name="property_lease-models" />
         <module name="property_lease-services" />
+        <module name="property_rental-api" />
+        <module name="property_rental-models" />
+        <module name="property_rental-services" />
         <module name="real_estates-api" />
         <module name="real_estates-models" />
         <module name="real_estates-services" />
@@ -19,6 +22,10 @@
       <module name="property_lease-api" target="1.8" />
       <module name="property_lease-models" target="1.8" />
       <module name="property_lease-services" target="1.8" />
+      <module name="property_rental" target="1.8" />
+      <module name="property_rental-api" target="1.8" />
+      <module name="property_rental-models" target="1.8" />
+      <module name="property_rental-services" target="1.8" />
       <module name="real_estates" target="1.8" />
       <module name="real_estates-api" target="1.8" />
       <module name="real_estates-models" target="1.8" />

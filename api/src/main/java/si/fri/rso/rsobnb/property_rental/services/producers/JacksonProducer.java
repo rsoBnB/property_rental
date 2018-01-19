@@ -1,4 +1,4 @@
-package si.fri.rso.rsobnb.property_rental.producers;
+package si.fri.rso.rsobnb.property_rental.services.producers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;

@@ -1,4 +1,4 @@
-package si.fri.rso.rsobnb.property_rental;
+package si.fri.rso.rsobnb.property_rental.services;
 
 import org.eclipse.persistence.annotations.UuidGenerator;
 

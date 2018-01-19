@@ -1,7 +1,7 @@
-package si.fri.rso.rsobnb.property_rental.exceptionmappers;
+package si.fri.rso.rsobnb.property_rental.services.exceptionmappers;
 
 
-import si.fri.rso.rsobnb.property_rental.dtos.ApiError;
+import si.fri.rso.rsobnb.property_rental.services.dtos.ApiError;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.ws.rs.NotFoundException;

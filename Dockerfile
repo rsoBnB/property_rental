@@ -4,8 +4,8 @@ RUN mkdir /app
 
 WORKDIR /app
 
-ADD ./api/target/property_lease-api-1.0.0-SNAPSHOT.jar /app
+ADD ./api/target/property_rental-api-1.0.0-SNAPSHOT.jar /app
 
-EXPOSE 8084
+EXPOSE 8082
 
-CMD ["java", "-jar", "property_lease-api-1.0.0-SNAPSHOT.jar"]
+CMD ["java", "-jar", "property_rental-api-1.0.0-SNAPSHOT.jar"]

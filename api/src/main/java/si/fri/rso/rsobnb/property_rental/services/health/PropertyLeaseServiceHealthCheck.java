@@ -1,9 +1,9 @@
-package si.fri.rso.rsobnb.property_rental.health;
+package si.fri.rso.rsobnb.property_rental.services.health;
 
 import org.eclipse.microprofile.health.Health;
 import org.eclipse.microprofile.health.HealthCheck;
 import org.eclipse.microprofile.health.HealthCheckResponse;
-import si.fri.rso.rsobnb.property_rental.configuration.RestProperties;
+import si.fri.rso.rsobnb.property_rental.services.configuration.RestProperties;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

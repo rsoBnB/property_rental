@@ -1,4 +1,4 @@
-package si.fri.rso.rsobnb.property_rental.producers;
+package si.fri.rso.rsobnb.property_rental.services.producers;
 
 import javax.enterprise.context.RequestScoped;
 import javax.enterprise.inject.Disposes;

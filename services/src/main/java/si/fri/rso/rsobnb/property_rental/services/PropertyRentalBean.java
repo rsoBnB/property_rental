@@ -1,8 +1,7 @@
-package si.fri.rso.rsobnb.property_rental;
+package si.fri.rso.rsobnb.property_rental.services;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
-import si.fri.rso.rsobnb.property_rental.PropertyRental;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

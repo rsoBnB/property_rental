@@ -10,8 +10,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="property_lease-services" />
-    <orderEntry type="module" module-name="property_lease-models" />
+    <orderEntry type="module" module-name="property_rental-services" />
+    <orderEntry type="module" module-name="property_rental-models" />
     <orderEntry type="library" name="Maven: com.kumuluz.ee:kumuluzee-jpa-eclipselink:2.4.1" level="project" />
     <orderEntry type="library" name="Maven: com.kumuluz.ee:kumuluzee-jpa-common:2.4.1" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:javax.persistence:2.1.1" level="project" />

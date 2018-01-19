@@ -1,9 +1,11 @@
-package si.fri.rso.rsobnb.property_rental.resources;
+package si.fri.rso.rsobnb.property_rental.services.resources;
 
 import com.kumuluz.ee.logs.cdi.Log;
-import si.fri.rso.rsobnb.property_rental.PropertyRental;
-import si.fri.rso.rsobnb.property_rental.configuration.RestProperties;
+import si.fri.rso.rsobnb.property_rental.services.PropertyRental;
+import si.fri.rso.rsobnb.property_rental.services.PropertyRentalBean;
+import si.fri.rso.rsobnb.property_rental.services.configuration.RestProperties;
 import org.eclipse.microprofile.metrics.annotation.Metered;
+
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.ws.rs.*;
