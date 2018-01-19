@@ -1,18 +1,18 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: propertyrental-deployment
+  name: propertylease-deployment
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: propertyrental
+        app: propertylease
     spec:
       containers:
       - image: ggrex/rsobnb-property_rental:0.2
         imagePullPolicy: Always
-        name: propertyrental
+        name: propertylease
         env:
           - name: KUMULUZEE_DISCOVERY_CLUSTER
             value: bluemix
@@ -21,9 +21,9 @@ spec:
           - name: KUMULUZEE_CONFIG_ETCD_HOSTS
             value: http://etcd:2379
           - name: KUMULUZEE_SERVER_BASEURL
-            value: http://property_rental:8081
+            value: http://property_rental:8084
           - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
-            value: jdbc:postgresql://postgres-propertyrental:5432/property_rental
+            value: jdbc:postgresql://postgres-propertylease:5432/property_rental
           - name: KUMULUZEE_DATASOURCES0_USERNAME
             value: dbuser
           - name: KUMULUZEE_DATASOURCES0_PASSWORD
@@ -31,6 +31,6 @@ spec:
           - name: KUMULUZEE_SERVER_BASEURL
             value: http://168.1.149.41:32623/
         ports:
-        - containerPort: 8082
+        - containerPort: 8084
           name: server
           protocol: TCP

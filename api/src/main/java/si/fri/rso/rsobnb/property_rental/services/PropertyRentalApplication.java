@@ -1,4 +1,4 @@
-package si.fri.rso.rsobnb.property_rental.api;
+package si.fri.rso.rsobnb.property_rental;
 
 import com.kumuluz.ee.discovery.annotations.RegisterService;
 

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: postgres-propertyrental
+  name: postgres-propertylease
 spec:
   type: ClusterIP
   ports:
@@ -9,4 +9,4 @@ spec:
     protocol: TCP
     targetPort: 5432
   selector:
-    app: postgres-propertyrental
+    app: postgres-propertylease

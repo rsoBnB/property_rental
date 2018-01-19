@@ -1,17 +1,17 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: postgres-propertyrental-deployment
+  name: postgres-propertylease-deployment
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: postgres-propertyrental
+        app: postgres-propertylease
     spec:
       containers:
         - image: centos/postgresql-94-centos7
-          name: postgres-propertyrental
+          name: postgres-propertylease
           env:
             - name: POSTGRESQL_USER
               value: dbuser

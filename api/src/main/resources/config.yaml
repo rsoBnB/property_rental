@@ -1,15 +1,15 @@
 kumuluzee:
-  name: property_rental
+  name: property_lease
   env:
     name: dev
   version: 1.0.0
   server:
-    base-url: http://localhost:8082
+    base-url: http://localhost:8084
     http:
-      port: 8082
+      port: 8084
   datasources:
-    - jndi-name: jdbc/PropertyRentalDS
-      connection-url: jdbc:postgresql://172.17.0.1:33335/property_rental
+    - jndi-name: jdbc/PropertyLeaseDS
+      connection-url: jdbc:postgresql://172.17.0.1:33337/property_lease
       username: dbuser
       password: postgres
       max-pool-size: 20
@@ -24,15 +24,15 @@ kumuluzee:
         allow-origin: "*"
   metrics:
         web-instrumentation:
-          - name: property_rental-endpoint
-            url-pattern: /v1/property_rental/*
+          - name: property_lease-endpoint
+            url-pattern: /v1/property_lease/*
   health:
       checks:
         data-source-health-check:
-          jndi-name: jdbc/PropertyRentalDS
+          jndi-name: jdbc/PropertyLeaseDS
   logs:
     config-file: '<?xml version="1.0" encoding="UTF-8"?>
-                  <Configuration name="property_rental">
+                  <Configuration name="property_lease">
                       <Appenders>
                           <Console name="console" target="SYSTEM_OUT">
                               <PatternLayout pattern="%d %p %marker %m %X %ex %n"/>

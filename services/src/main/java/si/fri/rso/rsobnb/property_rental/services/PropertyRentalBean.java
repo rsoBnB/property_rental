@@ -1,7 +1,9 @@
-package si.fri.rso.rsobnb.property_rental.services;
+package si.fri.rso.rsobnb.property_rental;
 
 import com.kumuluz.ee.rest.beans.QueryParameters;
 import com.kumuluz.ee.rest.utils.JPAUtils;
+import si.fri.rso.rsobnb.property_rental.PropertyRental;
+
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
@@ -10,7 +12,6 @@ import javax.ws.rs.core.UriInfo;
 import java.util.List;
 import java.util.logging.Logger;
 
-import si.fri.rso.rsobnb.property_rental.PropertyRental;
 
 @ApplicationScoped
 public class PropertyRentalBean {
